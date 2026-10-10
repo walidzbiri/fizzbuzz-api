@@ -11,3 +11,12 @@ class FizzBuzzParams(BaseModel):
 
 class FizzBuzzResponse(RootModel[list[str]]):
     root: list[str] = Field(..., description="FizzBuzz sequence")
+
+
+class FizzBuzzStatsResponse(BaseModel):
+    int1: int
+    int2: int
+    limit: int
+    str1: str
+    str2: str
+    hits: int

@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from src.domain.fizzbuzz.exceptions import (
     EmptyStringException,
@@ -26,3 +26,9 @@ class FizzBuzzParams:
             raise EmptyStringException("str1 cannot be empty")
         if not self.str2:
             raise EmptyStringException("str2 cannot be empty")
+
+
+@dataclass(frozen=True)
+class FizzBuzzStatsEntry:
+    params: FizzBuzzParams
+    hits: int = field(default=1)
