@@ -70,7 +70,6 @@ src/
 
 ## Design Decisions
 
-- **Immutable Value Objects**: FizzBuzzParams and FizzBuzzStatsEntry are frozen dataclasses
 - **Dependency Injection**: Stats store injected into service
 - **In-Memory Storage**: Simple, fast, sufficient for MVP
 - **Hexagonal Architecture**: Business logic independent of frameworks
@@ -81,4 +80,5 @@ src/
 - Shared storage (Redis/DB) for multi-worker or multi-replica deployments (in-memory store is per-process)
 - Rate limiting
 - Caching
-- Async routes (if database added)
+- Async routes (if database or any I/O added)
+- Add pre-commit hooks for linting and formatting

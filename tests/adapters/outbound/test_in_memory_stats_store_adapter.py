@@ -5,7 +5,6 @@ from src.domain.fizzbuzz.models import FizzBuzzParams
 
 
 class TestInMemoryFizzBuzzStatsStoreAdapter:
-
     def test_record_new_params(self) -> None:
         store = InMemoryFizzBuzzStatsStoreAdapter()
         params = FizzBuzzParams(int1=3, int2=5, limit=15, str1="Fizz", str2="Buzz")

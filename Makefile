@@ -5,6 +5,7 @@ help:
 	@echo "  make lint              - Run linter and formatter (ruff)"
 	@echo "  make typecheck         - Run type checker (mypy)"
 	@echo "  make test              - Run tests (pytest)"
+	@echo "  make test-concurrency  - Run concurrency test"
 	@echo "  make build             - Build Docker image"
 	@echo "  make start [MODE=...]  - Start app (MODE=local or docker, default: docker)"
 	@echo "  make start-docker      - Start in Docker with live reload"
@@ -23,6 +24,9 @@ typecheck:
 
 test:
 	poetry run pytest tests -v
+
+test-concurrency:
+	poetry run python scripts/test_concurrency.py
 
 build:
 	docker build -t fizzbuzz-api:latest .

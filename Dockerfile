@@ -1,7 +1,5 @@
 FROM python:3.13-slim AS builder
 
-ARG ARTIFACTORY_USER
-ARG ARTIFACTORY_PASSWORD
 ARG MODE
 
 RUN pip install poetry==2.3.2
