@@ -78,6 +78,7 @@ src/
 ## Future Improvements
 
 - Database adapter for persistent stats
+- Shared storage (Redis/DB) for multi-worker or multi-replica deployments (in-memory store is per-process)
 - Rate limiting
 - Caching
 - Async routes (if database added)
